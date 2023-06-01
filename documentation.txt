@@ -1,0 +1,29 @@
+Adım 1 : "showTime" adında bir fonksiyon tanımlanır. Bu fonksiyon, saat ve tarih bilgisini alarak zamanı gösteren bir saat yapısı oluşturur.
+
+Adım 2 : new Date() ifadesiyle JavaScript'te mevcut tarih ve saat bilgisini içeren bir Date nesnesi oluşturulur.
+
+Adım 3 : getHours() metoduyla, date nesnesinden saat bilgisi alınır ve hours değişkenine atanır. Bu değer, 0 ile 23 arasında bir tam sayı olarak temsil edilir.
+
+Adım 4 : getMinutes() metoduyla, date nesnesinden dakika bilgisi alınır ve minutes değişkenine atanır. Bu değer, 0 ile 59 arasında bir tam sayı olarak temsil edilir.
+
+Adım 5 : getSeconds() metoduyla, date nesnesinden saniye bilgisi alınır ve seconds değişkenine atanır. Bu değer, 0 ile 59 arasında bir tam sayı olarak temsil edilir.
+
+Adım 6 : session adında bir değişken oluşturulur ve başlangıçta "AM" olarak atanır. Bu değişken, saat bilgisine göre öğleden önce (AM) veya öğleden sonra (PM) ifadesini tutar.
+
+Adım 7 : Eğer hours değişkeni 0'a eşitse, saat 12 olarak ayarlanır. Böylece gece yarısı 12'yi gösterecektir.
+
+Adım 8 : Eğer hours değişkeni 12'den büyükse, saat 12'den çıkarılarak 12 saatten mod alınır ve hours değişkenine atanır. Böylece saat 13:00 gibi değerler 1:00 olarak gösterilecektir. Aynı zamanda session değişkeni de "PM" olarak güncellenir.
+
+Adım 9 : hours değişkeni 10'dan küçükse, önüne "0" karakteri eklenir. Bu, saat değerini iki basamaklı bir dize olarak göstermek için kullanılır.
+
+Adım 10 : minutes değişkeni 10'dan küçükse, önüne "0" karakteri eklenir. Bu, dakika değerini iki basamaklı bir dize olarak göstermek için kullanılır.
+
+Adım 11 : seconds değişkeni 10'dan küçükse, önüne "0" karakteri eklenir. Bu, saniye değerini iki basamaklı bir dize olarak göstermek için kullanılır.
+
+Adım 12 : time adında bir değişken oluşturulur ve saat, dakika, saniye ve session değerleri birleştirilerek oluşturulan bir dizeye atanır. Bu dize, zamanı ve öğleden önce/öğleden sonra ifadesini içerecektir.
+
+Adım 13 : getElementById("myClock") ifadesiyle HTML belgesinde "myClock" adlı bir öğe bulunur ve bu öğenin içeriği time değişkenine ayarlanır. Böylece saat değeri, HTML belgesinde bu öğe içinde görüntülenecektir.
+
+Adım 14 : setTimeout(showTime, 1000) ifadesiyle showTime fonksiyonu, 1 saniye (1000 milisaniye) sonra tekrar çağrılacaktır. Bu, her saniye saat değerinin güncellenmesini sağlar ve sürekli olarak güncel zamanı gösterir.
+
+Bu fonksiyon, JavaScript'i kullanarak basit bir saat göstergesi oluşturur ve saat, dakika, saniye ve öğleden önce/öğleden sonra bilgilerini güncelleyerek zamanı gerçek zamanlı olarak gösterir.
